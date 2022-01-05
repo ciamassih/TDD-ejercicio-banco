@@ -40,5 +40,11 @@ class TestCuentaBanco(unittest.TestCase):
         crecimiento = Cuenta.crecimiento((estado), (intereses))
         self.assertEqual(crecimiento, 6.5)
 
+    def test_saldo_insuficiente(self):
+        estado = 5
+        transferencia = 6
+        resta = Cuenta.restar((estado), (transferencia))
+        self.assertEqual(resta, "Saldo insuficiente")
+
 
 
