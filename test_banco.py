@@ -22,3 +22,9 @@ class TestCuentaBanco(unittest.TestCase):
         suma = Cuenta.sumar((estado), 5)
         self.assertEqual(suma, 10)
 
+    def test_cuenta_con_estado_y_transferencia(self):
+        estado = 5
+        transferencia = 3
+        resta = Cuenta.restar((estado), (transferencia))
+        self.assertEqual(resta, 2)
+
