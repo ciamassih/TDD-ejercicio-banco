@@ -8,3 +8,10 @@ class Cuenta():
 
     def restar(estado, num1):
         return estado - num1
+
+    def intereses(estado, num1):
+        return estado * num1
+
+    def crecimiento(estado, intereses):
+        nuevo_estado = intereses + estado
+        return nuevo_estado
