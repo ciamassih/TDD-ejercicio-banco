@@ -5,3 +5,6 @@ class Cuenta():
 
     def sumar(num1, num2):
         return num1 + num2
+
+    def deposito(estado, num1):
+        return estado + num1

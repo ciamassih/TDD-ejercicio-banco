@@ -17,3 +17,8 @@ class TestCuentaBanco(unittest.TestCase):
         suma = Cuenta.sumar(7, 5)
         self.assertEqual(suma, 12)
 
+    def test_cuenta_con_estado_guardado(self):
+        estado = 5
+        suma = Cuenta.sumar((estado), 5)
+        self.assertEqual(suma, 10)
+
