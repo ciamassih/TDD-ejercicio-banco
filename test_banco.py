@@ -44,7 +44,7 @@ class TestCuentaBanco(unittest.TestCase):
         estado = 5
         transferencia = 6
         resta = Cuenta.restar((estado), (transferencia))
-        self.assertEqual(resta, "Saldo insuficiente")
+        self.assertEqual(resta, 6)
 
 
 

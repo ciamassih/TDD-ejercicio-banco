@@ -8,7 +8,10 @@ class Cuenta():
         return num1 + num2
 
     def restar(estado, num1):
-        return estado - num1
+        if estado <= num1:
+            print("error")
+        else:
+            return estado - num1
 
     def intereses(estado, num1):
         return estado * num1
