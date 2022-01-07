@@ -71,5 +71,12 @@ class TestCuentaBanco(unittest.TestCase):
         with self.assertRaises(Error):
             cuenta = Cuenta("Hola")
 
+    def test_sin_parametro_cuenta1(self):
+        cuenta1 = Cuenta(5)
+        cuenta2 = Cuenta(0)
+        valor = Transferencia()
+        with self.assertRaises(Error):
+            valor.transferir("hola", cuenta2, 1)
+
 
 
