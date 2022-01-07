@@ -1,6 +1,6 @@
 import unittest
 
-from cuenta_banco import Cuenta
+from cuenta_banco import Cuenta, Error, Transferencia
 
 class TestCuentaBanco(unittest.TestCase):
 
@@ -27,10 +27,22 @@ class TestCuentaBanco(unittest.TestCase):
         cuenta.retiro(5)
         self.assertEqual(cuenta.balance, 0)
 
-    def test_retiro_2(self):
+    def test_retiro_cuenta_5_retiro_3(self):
         cuenta = Cuenta(5)
         cuenta.retiro(3)
         self.assertEqual(cuenta.balance, 2)
 
+    def test_retiro_cuenta_0_retiro_5(self):
+        cuenta = Cuenta(0)
+        with self.assertRaises(Error):
+            cuenta.retiro(5)
+
+    def test_transferencia_valor_1(self):
+        cuenta1 = Cuenta(5)
+        cuenta2 = Cuenta(0)
+        valor = Transferencia(cuenta1, cuenta2)
+        valor.transferir(1)
+        self.assertEqual(cuenta1.balance, 4)
+        self.assertEqual(cuenta2.balance, 1)
 
 
