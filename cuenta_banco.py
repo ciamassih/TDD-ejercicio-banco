@@ -5,3 +5,6 @@ class Cuenta:
 
     def ingreso(self, cantidad):
         self.balance += cantidad
+
+    def retiro(self, cantidad):
+        pass

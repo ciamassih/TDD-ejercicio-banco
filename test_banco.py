@@ -22,5 +22,10 @@ class TestCuentaBanco(unittest.TestCase):
         cuenta.ingreso(5)
         self.assertEqual(cuenta.balance, 5)
 
+    def test_retiro(self):
+        cuenta = Cuenta(5)
+        cuenta.retiro(5)
+        self.assertEqual(cuenta.balance, 0)
+
 
 
