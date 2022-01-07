@@ -7,4 +7,4 @@ class Cuenta:
         self.balance += cantidad
 
     def retiro(self, cantidad):
-        self.balance = 0
+        self.balance -= cantidad
