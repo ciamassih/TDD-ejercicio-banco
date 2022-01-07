@@ -1,6 +1,8 @@
 class Cuenta:
 
     def __init__(self, balance):
+        if type(balance) != int:
+            raise Error("Parámetro incorrecto")
         self.balance = balance
 
     def ingreso(self, cantidad):
