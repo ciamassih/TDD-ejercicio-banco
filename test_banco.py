@@ -40,8 +40,8 @@ class TestCuentaBanco(unittest.TestCase):
     def test_transferencia_valor_1(self):
         cuenta1 = Cuenta(5)
         cuenta2 = Cuenta(0)
-        valor = Transferencia(cuenta1, cuenta2)
-        valor.transferir(1)
+        valor = Transferencia()
+        valor.transferir(cuenta1, cuenta2, 1)
         self.assertEqual(cuenta1.balance, 4)
         self.assertEqual(cuenta2.balance, 1)
 

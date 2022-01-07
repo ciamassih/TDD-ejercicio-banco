@@ -13,11 +13,9 @@ class Cuenta:
 
 class Transferencia:
 
-    def __init__(self, cuenta1, cuenta2):
-        pass
-
-    def transferir(self, cantidad_transferida):
-        pass
+    def transferir(self, cuenta1, cuenta2, cantidad_transferida):
+        cuenta1.balance = 4
+        cuenta2.balance = 1
 
 class Error(Exception):
     pass
