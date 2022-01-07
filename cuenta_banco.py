@@ -4,4 +4,4 @@ class Cuenta:
         self.balance = balance
 
     def ingreso(self, cantidad):
-        pass
+        self.balance = 1
