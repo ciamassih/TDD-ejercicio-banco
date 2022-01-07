@@ -67,5 +67,9 @@ class TestCuentaBanco(unittest.TestCase):
         with self.assertRaises(Error):
             valor.transferir(cuenta1, cuenta2, 100)
 
+    def test_parametros_incorrectos(self):
+        with self.assertRaises(Error):
+            cuenta = Cuenta("Hola")
+
 
 
