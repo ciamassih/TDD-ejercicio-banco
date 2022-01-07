@@ -14,8 +14,10 @@ class Cuenta:
 class Transferencia:
 
     def transferir(self, cuenta1, cuenta2, cantidad_transferida):
-        cuenta1.balance = 4
-        cuenta2.balance = 1
+        if (cuenta1.balance <= 0):
+            raise Error("No puede realizarse la transferencia.")
+        cuenta1.balance -= cantidad_transferida
+        cuenta2.balance += cantidad_transferida
 
 class Error(Exception):
     pass
