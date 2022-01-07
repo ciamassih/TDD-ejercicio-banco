@@ -17,5 +17,10 @@ class TestCuentaBanco(unittest.TestCase):
         cuenta.ingreso(1)
         self.assertEqual(cuenta.balance, 1)
 
+    def test_mayor_ingreso_cuenta_0(self):
+        cuenta = Cuenta(0)
+        cuenta.ingreso(5)
+        self.assertEqual(cuenta.balance, 5)
+
 
 
